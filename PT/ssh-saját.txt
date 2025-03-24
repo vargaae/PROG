@@ -1,0 +1,30 @@
+Console vonali és távoli elérést biztosító jelszó titkosítása
+->service password-encryption
+
+Lerövidítve a logika ->SSH: 
+(titkosítási kulcs megadása) ip domain name <doménnév>
+->crypto key generate rsa general-keys modulus 1024 
+->(vty vonalakon engedélyezzük az ssh-t)line vty 0 15 
+-> transport input ssh -> login local -> exit 
+->(felhasználónév jelszó beírása) username <user> password <jelszó>
+
+Privilégizált mód jelszavának titkosítása
+SW1(config)#enable secret <jelszó>
+
+Console vonali és távoli elérést biztosító jelszó titkosítása
+SW1(config)#service password-encryption
+
+SSH
+
+SW1(config)#ip domain-name <név>
+SW1(config)#crypto key generate rsa
+SW1(config)#line vty 0 15
+SW1(config-line)#transport input ssh
+SW1(config-line)#login local
+SW1(config-line)#exit
+SW1(config)#username <user> password <jelszó>
+
+
+Belépés cmd-ben
+
+ssh -l <user> <ip>

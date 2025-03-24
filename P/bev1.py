@@ -32,7 +32,7 @@ def av03_feladat01() -> None:
         
     print(f'f1 output: {op}')
     
-# av03_feladat01()
+av03_feladat01()
 
 
 def av04_feladat01() -> None:
