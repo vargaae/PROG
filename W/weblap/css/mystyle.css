@@ -1,0 +1,84 @@
+/* 15. Az oldal minden szöveges tartalmát állítsa sorkizártra! cc */
+
+:root {
+  --text-align: justify;
+  --header-margin: 0px;
+  --header-align: center;
+  --header-color: #e6faff;
+  --author-align: left;
+  --italic: italic;
+  --normalstyle: normalstyle;
+  --author-margin: 40%;
+  --nav-padding: 5px 0px;
+  --section-padding: 20px;
+  --section-margin: 5px;
+  --footer-align: center;
+  --footer-padding: 10px;
+  --bg: white;
+}
+
+header {
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: var(--header-margin);
+}
+
+header h1,
+header p {
+  text-shadow: 1px 1px #000000;
+  text-align: center;
+  color: var(--header-color);
+}
+header p {
+  font-style: var(--italic);
+}
+
+.navbar-nav {
+	padding: var(--nav-padding);
+}
+
+main.container {
+  padding: 0px;
+}
+
+#menu-1,
+#menu-2,
+#menu-3,
+#menu-4,
+#menu-5 {
+	scroll-margin-top: 35px;
+}
+
+section {
+	padding: var(--section-padding);
+	margin-bottom: var(--section-margin);
+}
+
+footer {
+text-align: var(--footer-align);
+padding: var(--footer-padding);
+}
+
+
+.my-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+}
+
+p {
+  text-align: var(--text-align);
+}
+
+.author {
+  text-align: var(--author-align);
+  font-style: normal;
+  margin-left: var(--author-margin);
+}
+
+@media and (max-width: 576px) {
+body {
+	text-align: left;
+}
+}
